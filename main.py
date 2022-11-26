@@ -12,14 +12,10 @@ class LoginForm(FlaskForm):
     remember_me = BooleanField('Запомнить меня')
     submit = SubmitField('Войти')
 
-#@app.route("/")
-#def hello():
-#    return "Пудж самый лучший мужчина в мире"
-
 @app.route("/")
 @app.route("/index")
 def index():
-    user = "20KIS3"
+    user = "User"
     return render_template('index.html', title="Home page", username=user)
 
 @app.route('/login', methods=['GET', 'POST'])
